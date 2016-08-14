@@ -60,6 +60,8 @@ Create a new unordered list and insert between first and second paragraphs
 
 DOM is a way to reach into the page from the script and the way the page can reach into the script 
 A TREE STRUCTURE OF A WEB PAGE
+
+HTML(Elements/Attributes/Text) --> DOM(tree structure + methods) --> JavaScript
 ```
 ```html
 <!--`tree structure of a web page`: tree `nodes`-->
