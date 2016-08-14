@@ -4,19 +4,19 @@
 
 ## 1. Lynda.com - [JavaScript Essential Training](https://www.lynda.com/MyPlaylist/Watch/6752886/87513?autoplay=true)
 
-### 1. Introduction of JavaScript
+### 1). Introduction of JavaScript
 * How does JavaScript work with HTML and CSS?
 ```go
 Client-Side programming Language
 Only works in a Web Browser
 Can not access to database
 ```
-### 2. Core JavaScript Syntax
+### 2). Core JavaScript Syntax
 * JavaScript is CASE SENSITIVE
 * JavaScript comment: two formard slashes// multi lines/*   */
 * When the JavaScript run? in the head/body-inline JavaScript
 
-### 3. Types and Objects
+### 3). Types and Objects
 * Variables are containers(e.g.,var year;) no need to specify the variable types
 * `Array` in JavaScript is dynamic.
 * JavaScript `numbers` are 64-bit floating point numbers.
@@ -44,14 +44,15 @@ player1.logDetails();
 player2.logDetails();
 
 ```
-### 4. `DOM`(Document Object Model)
+### 4). `DOM`(Document Object Model)
 ```go
 What is the document? --> web page
 What are the objects? --> things, pieces
 What is the model? --> tree structure, a standard we can use
 so, DOM is not a language, it is an idea, an convention
 it is an agreed-upon terminology that will let us describe and interact with any web page.
-
+```
+```go
 What we can do with DOM?
 Get the title text
 Get the second paragraph
@@ -61,10 +62,10 @@ Get all the <li> elements in the last unordered list
 Find the image with an id of "logo" and move it 40 pixels to the right
 Change a link so it performs a JavaScript function when clicked
 Create a new unordered list and insert between first and second paragraphs
-
+```
+```go
 DOM is a way to reach into the page from the script and the way the page can reach into the script 
 A TREE STRUCTURE OF A WEB PAGE
-
 HTML(Elements/Attributes/Text) --> DOM(tree structure + methods) --> JavaScript
 ```
 ```html
@@ -100,7 +101,48 @@ var secondItem = myElement.getElementByTagName("li")[1];
 myElement.insertBefore(myNewElement, secondItem);
 ```
 
-### 5. Events and Event Listeners
+### 5). Events and Event Listeners
+```go
+What is an event?
+```
+```go
+click a button
+scroll the screen
+click a form field
+...
+```
+* Event Names
+```go
+onload
+onclick
+onmouseover
+onblur
+onfocus
+...
+```
+* Event Handler
+```go
+write functions to handle or listen to events when they happen
+```
+```javascript
+//method1: write event handler in html
+<button onclick="alert('Hello World');">
+Run Some JavaScript
+</button>
+```
+```javascript
+//method2: element.event
+myelement.onclick = function(){
+  // event handler code here
+};//semicolon at the end of the block to end the statement
+```
+```javascript
+//method3: using a method called addEventListener passing three parameters
+//addEventListener(event, functionname, true/false)
+document.addEventListener('click', myFunction, false);
+document.addEventListener('click', anotherFunction, false);//benefit of method3
+document.removeEventListener('click', anotherFunction, false);
+```
 # Mind Mapping
 
 
