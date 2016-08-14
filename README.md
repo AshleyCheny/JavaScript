@@ -4,23 +4,27 @@
 
 ## 1. Lynda.com - [JavaScript Essential Training](https://www.lynda.com/MyPlaylist/Watch/6752886/87513?autoplay=true)
 
-* 1. How does JavaScript work with HTML and CSS?
+### 1. Introduction of JavaScript
+* How does JavaScript work with HTML and CSS?
 ```go
 Client-Side programming Language
 Only works in a Web Browser
 Can not access to database
 ```
-* 1. JavaScript is CASE SENSITIVE
-* 3. JavaScript comment: two formard slashes// multi lines/*   */
-* 4. When the JavaScript run? in the head/body-inline JavaScript
-* 5. Variables are containers(e.g.,var year;) no need to specify the variable types
-* 6. `Array` in JavaScript is dynamic.
-* 7. An `object` has properties and methods. Check the properties and methods for objects througth Reference.
-* 8. JavaScript `numbers` are 64-bit floating point numbers.
-* 9. Not a Number(NaN), isNaN()
-* 10. `string` methods: split(),indexOf(), slice(), substring(), substr().../string comparison(case sensitive)
-* 11. `date` object month/week/hour is zero-based, date comparison
-* 12. create a method for an object
+### 2. Core JavaScript Syntax
+* JavaScript is CASE SENSITIVE
+* JavaScript comment: two formard slashes// multi lines/*   */
+* When the JavaScript run? in the head/body-inline JavaScript
+
+### 3. Types and Objects
+* Variables are containers(e.g.,var year;) no need to specify the variable types
+* `Array` in JavaScript is dynamic.
+* JavaScript `numbers` are 64-bit floating point numbers.
+* Not a Number(NaN), isNaN()
+* `string` methods: split(),indexOf(), slice(), substring(), substr().../string comparison(case sensitive)
+* `date` object month/week/hour is zero-based, date comparison
+* * An `object` has properties and methods. Check the properties and methods for objects  througth Reference.
+* create a method for an object
 ```javascript
 //create two objects
 var player1 = { name: "Fred", score: 100000, rank:1 };
@@ -40,7 +44,7 @@ player1.logDetails();
 player2.logDetails();
 
 ```
-*  13. `DOM`(Document Object Model)
+### 4. `DOM`(Document Object Model)
 ```go
 What is the document? --> web page
 What are the objects? --> things, pieces
@@ -84,7 +88,19 @@ myElement.getAttribute("align");
 myElement.setAttribute("align","left");
 myElemnt.innerHTML;//An element text content or a bunch of codes inside an element.
 ```
+```javascript
+//Creating DOM elements
+var myNewElement = document.createElement("li");//create nodes first
+myElement.appendChild(myNewElement);//append the node to its parent's node
+var myText = document.createTextNode("New list item text"); //same here, create node first
+myNewElement.appendChild(myText);//or myNewElement.innerHTML = "New list item text";
 
+var myNewElement = document.createElement("li");
+var secondItem = myElement.getElementByTagName("li")[1];
+myElement.insertBefore(myNewElement, secondItem);
+```
+
+### 5. Events and Event Listeners
 # Mind Mapping
 
 
