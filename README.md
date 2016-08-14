@@ -80,6 +80,7 @@ document.getElementByTagName("li");//return an array
 //change or add an attribute, add new elemnts inside a div or inside a list?
 myElement.getAttribute("align");
 myElement.setAttribute("align","left");
+myElemnt.innerHTML;//An element text content or a bunch of codes inside an element.
 ```
 
 # Mind Mapping
