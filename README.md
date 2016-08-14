@@ -1,6 +1,6 @@
 # JavaScript
 * Browser: Chrome/Firefox
-* Text Editor: Sublime Text2
+* Text Editor: Sublime Text2/Brackets
 
 ## 1. Lynda.com - [JavaScript Essential Training](https://www.lynda.com/MyPlaylist/Watch/6752886/87513?autoplay=true)
 
@@ -161,7 +161,7 @@ setTimeout(simpleMessage, 5000);
 //change images every 5ms
 var myImage = document.getElementById("mainImage");
 
-var imageArray = ["_iamges/overlook.jpg", "_images/winery_sign.jpg", "_iamges/lunch.jpg,
+var imageArray = ["images/overlook.jpg", "images/winery.jpg", "images/lunch.jpg",
 "_images/bigSur.jpg"];
 var imageIndex = 0;
 
@@ -178,9 +178,91 @@ var intervalHandle = setInterval(changeImage, 5000);
 //to clear interval
 myImage.onclick = function(){
   clearInterval(intervalHandle);
-
-//
 ```
+### 6) Debugging JavaScript
+* Common JavaScript errors
+- `Issue 1: Syntax error`
+- `Issue 2: calling a non-existent function`
+- `Issue 3: using document.getElementById before the element is part of the DOM`
+- `Issue 4: assignment instead of equality`
+- `Issue 5: missing parameters in function calls`
+
+* Using Firebug
+- `DOM`
+- `Script`
+- ```go
+breakpoint
+```
+- `Console`
+
+### 7) Building Smarter Forms
+```go
+properties
+events
+onchage
+onsubmit
+```
+### 8) UI Enhancement
+* CSS and JavaScript
+```go
+properties in CSS become camelCase in JavaScript
+```
+```html
+#example{
+width:340px;
+color: #fff;
+font-weight:bold;
+background-color: #4343;
+}
+```
+```javascript
+myElement.style.width="340px";
+myElement.style.color="#fff";
+myElement.style.fontWeight="bold";
+myElement.style.backgroundColor="#4343"
+```
+* applying and removing CSS classes
+
+### 9) JavaScript Best Practice
+* Understanding JavaScript style
+```go
+1. naming conventions: meaningful, camelCase, Object: uppercase first letter
+```
+* Minifying JavaScript codes
+```go
+reduce file size
+use minification tools: JSMin, YUI Compressors, Google Closure Compiler
+```
+* Using JavaScript code checkers
+```go
+Tool: JSLint
+```
+### 10) JavaScript Libraries
+* a bunch of codes people wrote before
+* jQuery/Lightbox2/...
+* it is important to explore JavaScript libraries
+* jQuery
+```javascript
+//regular JavaScript
+document.getElementById("myDiv").className = "highlight";
+```
+```javascript
+//jQuery
+jQuery("#myDiv").addClass("highlight");//addClass() method is defined in the jQuery library
+```
+* jQuery Alias
+```go
+replace jQuery with $
+```
+```javascript
+// $("what to find").someAction(any params);
+$("#myDiv").addClass("highlight");
+// using this in jQuery
+$("h2").click(function(){
+  $(this).text("Your clicked me!");
+}); //this points to element h2
+```
+
 # Mind Mapping
 
 
