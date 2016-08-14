@@ -143,6 +143,44 @@ document.addEventListener('click', myFunction, false);
 document.addEventListener('click', anotherFunction, false);//benefit of method3
 document.removeEventListener('click', anotherFunction, false);
 ```
+```javascript
+//working with onclick, onload
+
+```
+```javascript
+//working with onblur and onfocus
+
+```
+```javascript
+//working with timers: setTimeout(function, time), setInterval(function, time)
+function simpleMessage(){
+  alert("This is just an alert box");
+}
+setTimeout(simpleMessage, 5000);
+
+//change images every 5ms
+var myImage = document.getElementById("mainImage");
+
+var imageArray = ["_iamges/overlook.jpg", "_images/winery_sign.jpg", "_iamges/lunch.jpg,
+"_images/bigSur.jpg"];
+var imageIndex = 0;
+
+function changeImage(){
+  myImage.setAttribute("src",imageArray[imageIndex]);
+  imageIndex++;
+  if(imageIndex >= imageArrary.length){
+    imageIndex = 0;
+  }
+}
+
+var intervalHandle = setInterval(changeImage, 5000);
+
+//to clear interval
+myImage.onclick = function(){
+  clearInterval(intervalHandle);
+
+//
+```
 # Mind Mapping
 
 
