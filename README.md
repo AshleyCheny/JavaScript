@@ -262,6 +262,35 @@ $("h2").click(function(){
   $(this).text("Your clicked me!");
 }); //this points to element h2
 ```
+* Using a content distribution network(CDN) to deliver JavaScript files
+```javascript
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+```
+### 11) JavaScript and HTML5
+* HTML5: better supporting videos and audios
+```html
+<video id="myVideo" controls preload="auto">
+  <source src="videofile.mp4" type="video/mp4"/>
+</video>
+<!--methods-->
+.play();
+.pause();
+.currentTime=0;
+//event
+myVideo.addEventListener("ended", function(){},false);
+```
+```go
+HTML5 & CSS3 features detection
+tools: modernizr
+```
+```javascript
+if(Modernizr.video){
+  //yes
+} else{
+  //perhaps replace with Flash video
+}
+```
+
 
 # Mind Mapping
 
