@@ -290,6 +290,87 @@ if(Modernizr.video){
   //perhaps replace with Flash video
 }
 ```
+### 12) Regualr Expressions: a tool to use
+```javascript
+//create regular expressions
+var myRE = /hello/;
+var myRE = /^hello/; //^ at the start
+var myRE = /hello$/; //$ at the end
+//...
+//or
+var myRE = new RegExp("hello");
+
+var myString = "Does this sentence have the word hello in it?";
+if(myRE.test(myString)){
+  alert("Yes");
+}
+```
+### 13) Working with AJAX
+`What is AJAX`
+```javascript
+//google search autocomplete
+//1. Create the object to call the server
+var myRequest = new XMLHttpRequest();
+
+//2. Let the server passing information to users
+//create an event handler for the request to call back
+myRequest.onreadystatechange = function(){
+  console.log("We were called!");
+}
+
+//Then configure and send
+myRequest.open("GET", "http://mysite.com/somedata.php",true);
+myRequest.send(null);
+//...
+```
+
+### 14) Working with objects and prototypes
+```javascript
+//formalizing objects with constructors
+function Player(n){
+this.name = n;
+}
+var fred = new Player();
+```
+### 15) Examples
+*Countdown page
+```html
+<!doctype html>
+<head>
+    <title>Countdown</title>
+    <style tyep="text/css">
+        body{
+            font-family: sans-serif;
+            color: aqua;
+        }  
+        #container{
+            width: 400px;
+            margin: auto;
+        }
+        h1{
+            font-size: 5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inputArea"></div>
+        <h1 id="time">0:00</h1>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+* Resize
+* Accordion
+* Where to get the help?
+* MDN
+* Dev.Opera.com
+* jQuery
+* Yahoo developer network
+* stackoverflow
+
+
 
 
 # Mind Mapping
